@@ -1,0 +1,3 @@
+# .mcp_env文件内容（UTF-8编码）
+MCP_GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  # 你的GitHub个人访问令牌
+GITHUB_EVAL_ORG=openai                                     # 目标组织名（harmony项目所属组织）

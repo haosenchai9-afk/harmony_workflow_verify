@@ -1,0 +1,61 @@
+# workflow_verify_config.yaml文件内容（UTF-8编码）
+target_repo: "harmony"
+branch_name: "fix/race-condition-tokenizer-loading"
+verify_file_path: "src/concurrent_loading.rs"
+file_keywords:
+  - "DOWNLOAD_MUTEX"
+  - "OnceLock<Mutex<()>>"
+  - "load_harmony_encoding_safe"
+  - "Thread-safe tokenizer loading"
+issue_title_substring: "race condition in HarmonyEncoding tokenizer loading"
+issue_title_keywords:
+  - "race condition"
+  - "HarmonyEncoding"
+  - "tokenizer loading"
+  - "concurrent access"
+issue_reference_numbers:
+  - "6"
+  - "1"
+issue_headings:
+  - "## Problem"
+  - "## Root Cause"
+  - "## Expected Solution"
+  - "## Technical Requirements"
+issue_keywords:
+  - "multiple threads"
+  - "tokenizer file downloads"
+  - "mutex-based file locking"
+  - "std::sync::OnceLock"
+  - "thread safety"
+pr_title_substring: "Fix race condition in HarmonyEncoding tokenizer loading"
+pr_title_keywords:
+  - "Fix race condition"
+  - "HarmonyEncoding"
+  - "tokenizer loading"
+  - "thread-safe"
+pr_reference_numbers:
+  - "1"
+  - "6"
+pr_headings:
+  - "## Summary"
+  - "## Changes"
+  - "## Testing"
+  - "## Risk Assessment"
+pr_keywords:
+  - "concurrent downloads"
+  - "offline loading API"
+  - "OnceLock<Mutex<()>>"
+  - "DOWNLOAD_MUTEX"
+  - "thread safety verification"
+review_keywords:
+  - "OnceLock"
+  - "Mutex"
+  - "thread safety"
+  - "concurrent access"
+  - "DOWNLOAD_MUTEX"
+issue_comment_keywords:
+  - "std::sync::Mutex"
+  - "OnceLock"
+  - "DOWNLOAD_MUTEX"
+  - "PR #456"  # 实际验证时会自动替换为找到的PR编号
+  - "tokenizer loading fixed"
